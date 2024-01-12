@@ -1,0 +1,123 @@
+.nav{
+    position: fixed;
+    gap: 15px;
+    box-sizing: border-box;
+    top: 0px;
+    right: 0px;
+    transition: 1s;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    margin: 0px 10px;
+    padding: 20px 10px;
+}
+
+.links{
+    width: fit-content;
+    transition: 1s;
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.links-active > .link:nth-child(1){
+    transform: translateX(0);
+} 
+.links-active > .link:nth-child(2){
+    transform: translateX(0);
+} 
+.links-active > .link:nth-child(3){
+    transform: translateX(0);
+} 
+.links-active > .link:nth-child(4){
+    transform: translateX(0);
+}
+
+.link{
+    box-shadow: 0 6px 15px rgba(0,0,0,.1);
+    z-index: 10;
+    line-height:20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    border-radius: 50px;
+    overflow: hidden;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.link-inner{
+    transition: .1s;
+    box-sizing: border-box;
+    padding: 11px 20px;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.link-inner:hover{
+    background-color: #3771C8;
+    color: white;
+}
+
+.link:hover{
+    background-color: aqua;    
+}
+
+.link:nth-child(1){
+    transform: translateX(45vw);
+    transition: .7s;
+}
+
+.link:nth-child(2){
+    transform: translateX(45vw);
+    transition: .9s;
+}
+
+.link:nth-child(3){
+    transform: translateX(45vw);
+    transition: 1.1s;
+}
+
+.link:nth-child(4){
+    transform: translateX(45vw);
+    transition: 1.3s;
+}
+
+.hamburger{
+    transition: 1s ease;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.hamburger-active{
+    opacity: 0;
+    font-size: 0px;
+}
+
+.close{
+    transition: 1s;
+    cursor: pointer;
+    font-size: 0px;
+}
+
+.close-active{
+    font-size: 25px;
+}
+
+.icons-group{
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,.1);
+    border-radius: 50px;
+    width: 50px;
+    height: 40px;
+    z-index: 10;
+    top: 30px;
+    right: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,10 @@
+.fotter{
+    width: 100%;
+    background-color: #101010;
+    margin-top: 50px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 80px;
+    font-size: 30px;
+    box-sizing: border-box;
+}

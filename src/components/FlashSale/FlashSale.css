@@ -1,0 +1,72 @@
+.flash-sale{
+    padding: 30px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flash-header{
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.flash-box{
+    width: 20px;
+    height: 40px;
+    background-color: #DB4444;
+    border-radius: 3px;
+}
+.flash-today{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #DB4444;
+    font-weight: 600;
+}
+
+.flash-content{
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+}
+
+.flash-text{
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.flash-time{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 17px;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.flash-time p{
+    margin: 0;
+    opacity: .3;
+}
+
+.flash-days::before,.flash-hours::before,.flash-minutes::before,.flash-seconds::before{
+    content: 'Days';
+    font-size: 11px;
+    position: absolute;
+    top: -9px;
+}
+
+.flash-hours::before{
+    content: 'Hours';
+}
+
+.flash-minutes::before{
+    content: 'Minutes';
+}
+
+.flash-seconds::before{
+    content: 'Seconds';
+}

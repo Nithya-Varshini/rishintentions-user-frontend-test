@@ -1,0 +1,89 @@
+
+.content-left{
+    width: 25%;
+}
+
+.content-left-float{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.float-true{
+    width: calc(25% - 5px);
+    top: 5px;
+    position: fixed;
+}
+
+.left-inner-1{
+    height: 348px;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-inner-button{
+    cursor: pointer;
+    width: 100%;
+    height: 47.42px;
+    border-radius: 25px;
+    display: flex;
+}
+
+.left-inner-button:hover > .left-inner-button-left{
+    width: 85%;
+    border-radius: 25px;
+}
+
+.left-inner-button-left{
+    transition: .2s ease;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: 'Poppins';
+    border-radius: 25px 0px 0px 25px;
+}
+.left-inner-button-right{
+    transition: .2s ease;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    background-color: white;
+    border-radius: 0px 25px 25px 0px;
+    font-size: 20px;
+}
+.left-inner-button:hover > .left-inner-button-right{
+    background-color: #3771C8;
+    color: white;
+    width: 15%;
+    margin-left: 5px;
+    border-radius: 25px;
+}
+
+.left-inner-name{
+    font-family: 'Poppins';
+    font-size: 30px;
+}
+
+.left-inner-desc{
+    font-family: 'Poppins';
+}
+
+.left-inner-buy{
+    font-family: 'Poppins';
+    border-top: 1px solid black;
+    padding-top: 10px;
+}

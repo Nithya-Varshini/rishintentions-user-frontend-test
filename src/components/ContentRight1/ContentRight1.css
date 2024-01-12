@@ -1,0 +1,112 @@
+
+.content-right-1{
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.content-right-header{
+    font-family: 'Poppins';
+    padding-bottom: 10px;
+    font-weight: 300;
+    border-bottom: 1px solid black;
+}
+
+.content-right-profile{
+    display: flex;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    gap: 40px;
+}
+
+
+.content-right-profile-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content-right-profile-content-heading{
+    font-family: 'Poppins';
+    font-size: 50px;
+
+}
+
+.content-right-profile-content-para{
+    font-family: 'Poppins';
+    text-align: justify;
+    font-size: 18px;
+}
+
+.content-right-profile-image{
+    width: 35%;
+}
+
+
+.right-inner-button{
+    margin-top: 20px;
+    transition: .1s;
+    cursor: pointer;
+    width: 58%;
+    height: 47.42px;
+    border-radius: 25px;
+    display: flex;
+}
+
+.right-inner-button:hover > .right-inner-button-left{
+    width: 85%;
+    border-radius: 25px;
+}
+
+.right-inner-button-left{
+    transition: .1s;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    box-sizing: border-box;
+    color: white;
+    background-color: #3771C8;
+    font-family: 'Poppins';
+    border-radius: 25px 0px 0px 25px;
+}
+.right-inner-button-right{
+    transition: .1s;
+    width: 20%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    background-color: #3771C8;
+    border-radius: 0px 25px 25px 0px;
+    font-size: 20px;
+}
+.right-inner-button:hover > .right-inner-button-right{
+    width: 15%;
+    margin-left: 5px;
+    border-radius: 25px;
+}
+
+.spirtual-guru{
+    margin-top: 5px;
+    display: flex;
+    font-family: 'Poppins';
+    font-size: 65px;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.spirtual-guru p{
+    margin: 0;
+}
+
+.spirtual-guru img{
+    width: 125px;
+}

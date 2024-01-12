@@ -1,0 +1,14 @@
+.booking{
+    display: flex;
+    justify-content: center;
+}
+
+.frame{
+    background-color: #ffffff;
+    margin-top: 80px;
+    height: calc(100vh - 80px) !important;
+}
+
+.frame::-webkit-scrollbar-thumb{
+    display: none;
+}

@@ -1,0 +1,72 @@
+.spotify-bg{
+    background-image: url('../../assets/spotify-bg.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spotify-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 80%;
+    font-family: 'Poppins';
+}
+
+.spotify-quoue{
+    color: #F7BDCF;
+}
+
+.spotify-title{
+    color: white;
+    font-size: 40px;
+}
+
+.spotify-desc{
+    color: white;
+    font-weight: 200;
+    text-align: center;
+}
+
+.spotify-links{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.spotify-link,.insta-link{
+    cursor: pointer;
+    width: 100px;
+    object-fit: contain;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.spotify-link:hover,.insta-link:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.spotify-footer{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.spotify-footer p{
+    color: white;
+    opacity: .5;
+}
+
+.spotify-footer-link{
+    cursor: pointer;
+    color: white;
+    opacity: 1;
+    border-bottom: 2px solid #D438FF;
+    padding-bottom: 2px;
+}

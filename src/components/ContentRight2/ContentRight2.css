@@ -1,0 +1,245 @@
+.content-right-session-heading {
+    margin-top: 40px;
+    font-family: 'Poppins';
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.content-right-session-desc {
+    margin-top: 40px;
+    font-family: 'Poppins';
+    width: 85%;
+}
+
+.session-one {
+    margin-top: 40px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    border: 1.5px solid #2B3337;
+    border-radius: 30px;
+    padding: 3px;
+    padding-left: 15px;
+}
+
+.session-one-inner {
+    background-color: #2B3337;
+    padding: 2px 15px;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    gap: 10px;
+}
+
+.session-one-inner p {
+    color: #00E941;
+    margin: 0;
+}
+
+.session-options {
+    margin-top: 40px;
+    margin-left: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.session-lines {
+    width: 18%;
+    height: 280px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.session-line {
+    transition: .3s ease;
+    width: 7px;
+    height: 100%;
+    background-color: #7DC468;
+}
+
+.session-lines:hover>.session-line:nth-child(1) {
+    height: 50%;
+    margin-top: 15%;
+}
+
+.session-lines:hover>.session-line:nth-child(2) {
+    height: 50%;
+    margin-top: 70%;
+}
+
+.session-lines:hover>.session-line:nth-child(3) {
+    height: 70%;
+    margin-top: 15%;
+}
+
+.session-lines:hover>.session-line:nth-child(4) {
+    height: 60%;
+    margin-top: 50%;
+}
+
+.session-links {
+    height: 280px;
+    display: flex;
+    font-size: 38px;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Poppins';
+}
+
+.session-link {
+    position: relative;
+    height: fit-content;
+    cursor: pointer;
+    display: grid;
+    align-items: center;
+    margin: 0;
+}
+
+.first-text,.second-text{
+    grid-row: 1/1;
+    grid-column: 1/1;
+}
+
+.second-text{
+    border-radius: 5px;
+    width: 100%;
+    transition: .5s;
+    background-color: #7DC468;
+    padding: 0px 10px;
+    color: white;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.session-link:hover > .second-text{
+    height: 100%;
+    margin-top: 0;
+}
+
+.session-verified{
+    padding: 0px 20px;
+    box-sizing: border-box;
+    margin-top: 40px;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.session-verified-item{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.session-verified-item img{
+    width: 25px;
+}
+
+.session-verified-item p{
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.session-panel{
+    border-radius: 20px;
+    background-color: #E3FEE6;
+    margin: 10px;
+    margin-top: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 30px;
+}
+
+.session-panel-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quote-image{
+    width: 25px;
+}
+
+.session-panel-left-desc{
+    font-family: 'Poppins';
+    font-size: 16px;
+}
+
+.session-panel-left-profile{
+    display: flex;
+    gap: 10px;
+}
+
+.session-panel-left-profile-image{
+    background-image: url('../../assets/profile.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.session-panel-left-profile-names{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins';
+}
+
+.session-panel-left-profile-names p:nth-child(1){
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.session-panel-left-profile-names p:nth-child(2){
+    font-size: 15px;
+    font-weight: 400;
+    color: #7DC468;
+}
+
+p{
+    margin: 0;
+}
+
+.session-panel-right{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+    border-radius: 15px;
+}
+
+.session-panel-right p{
+    font-family: 'Poppins';
+    width: 85%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.session-panel-right span{
+    color: #7DC468;
+}
+
+.session-panel-right button{
+    cursor: pointer;
+    width: 85%;
+    text-align: center;
+    border: none;
+    background-color: #7DC468;
+    color:white;
+    font-size: 17px;
+    padding: 10px 0px;
+    border-radius: 10px;
+}
