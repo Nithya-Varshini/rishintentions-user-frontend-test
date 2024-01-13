@@ -1,5 +1,6 @@
 import React from 'react'
 import "./ContentRight1.css"
+import { Icon } from '@iconify/react'
 
 const ContentRight1 = () => {
   return (
@@ -13,7 +14,7 @@ const ContentRight1 = () => {
                 </div>
                 <div className='right-inner-button'>
                   <div className='right-inner-button-left'>Learn More</div>
-                  <div className='right-inner-button-right'>&gt;</div>
+                  <div className='right-inner-button-right'><Icon icon="mingcute:right-line" color="white"/></div>
                 </div>
               </div>
               <img src={require('../../assets/profile.png')} className='content-right-profile-image' alt='profile-img' />

@@ -1,6 +1,5 @@
 import React from 'react'
 import './Home.css'
-import Spline from '@splinetool/react-spline';
 import ContentRight1 from '../../components/ContentRight1/ContentRight1';
 import ContentRight2 from '../../components/ContentRight2/ContentRight2';
 import ContentRight3 from '../../components/ContentRight3/ContentRight3';
@@ -18,12 +17,11 @@ const Home = () => {
           <ContentRight2 />
           <ContentRight3 /> 
           <ContentRight4 />
+          <div className='content-right-1 fotter'>
+          </div>
         </div>
       </div>
-      <Spline
-        className='background'
-        scene="https://prod.spline.design/iDsKkcvfDrAFN1Ux/scene.splinecode"
-      />
+      
     </>
   )
 }

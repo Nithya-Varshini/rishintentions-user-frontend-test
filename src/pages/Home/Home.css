@@ -24,3 +24,7 @@
     flex-direction: column;
     gap: 5px;
 }
+
+.fotter{
+    border-radius: 100px !important;
+}

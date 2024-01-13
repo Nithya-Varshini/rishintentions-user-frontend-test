@@ -19,28 +19,22 @@
     gap: 10px;
     align-items: flex-end;
     height: 100%;
+    transform: translateX(120%);
 }
 
-.links-active > .link:nth-child(1){
-    transform: translateX(0);
-} 
-.links-active > .link:nth-child(2){
-    transform: translateX(0);
-} 
-.links-active > .link:nth-child(3){
-    transform: translateX(0);
-} 
-.links-active > .link:nth-child(4){
-    transform: translateX(0);
+.links-active{
+    transform: translateX(0%);
 }
+
 
 .link{
-    box-shadow: 0 6px 15px rgba(0,0,0,.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,.1);
     z-index: 10;
     line-height:20px;
     text-decoration: none;
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
+    font-family: Neue Montreal;
+    font-weight: 400;
     color: black;
     border-radius: 50px;
     overflow: hidden;
@@ -60,30 +54,6 @@
 .link-inner:hover{
     background-color: #3771C8;
     color: white;
-}
-
-.link:hover{
-    background-color: aqua;    
-}
-
-.link:nth-child(1){
-    transform: translateX(45vw);
-    transition: .7s;
-}
-
-.link:nth-child(2){
-    transform: translateX(45vw);
-    transition: .9s;
-}
-
-.link:nth-child(3){
-    transform: translateX(45vw);
-    transition: 1.1s;
-}
-
-.link:nth-child(4){
-    transform: translateX(45vw);
-    transition: 1.3s;
 }
 
 .hamburger{
@@ -109,7 +79,7 @@
 
 .icons-group{
     cursor: pointer;
-    box-shadow: 0 6px 15px rgba(0,0,0,.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,.1);
     border-radius: 50px;
     width: 50px;
     height: 40px;

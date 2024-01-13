@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./ContentLeft.css"
+import { Icon } from '@iconify/react'
 
 const ContentLeft = () => {
 
@@ -35,15 +36,15 @@ const ContentLeft = () => {
                 </div>
                 <div className='left-inner-button'>
                     <div className='left-inner-button-left'>Store</div>
-                    <div className='left-inner-button-right'>&gt;</div>
+                    <div className='left-inner-button-right'><Icon icon="mingcute:right-line" /></div>
                 </div>
                 <div className='left-inner-button'>
-                    <div className='left-inner-button-left'>Resources</div>
-                    <div className='left-inner-button-right'>&gt;</div>
+                    <div className='left-inner-button-left'>Book A Session</div>
+                    <div className='left-inner-button-right'><Icon icon="mingcute:right-line" /></div>
                 </div>
                 <div className='left-inner-button'>
                     <div className='left-inner-button-left'>Donate</div>
-                    <div className='left-inner-button-right'>&gt;</div>
+                    <div className='left-inner-button-right'><Icon icon="mingcute:right-line" /></div>
                 </div>
             </div>
         </div>
