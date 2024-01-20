@@ -14,7 +14,7 @@ const Store = ({ data, setData, setCartActive }) => {
   useEffect(() => {
     if (data === null) {
       console.log('fetched');
-      fetch('http://localhost:4000/store-home')
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/store-home`)
         .then(res => res.json())
         .then(data => { setData(data); setLoading(false); console.log(data) })
         .catch(err => console.log(err))

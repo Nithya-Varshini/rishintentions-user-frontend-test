@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 const ProductPage = ({ products, setData, setCartActive }) => {
 
   if (products === undefined) {
-    fetch('http://localhost:4000/store-home')
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/store-home`)
       .then(res => res.json())
       .then(data => { setData(data); console.log(data) })
       .catch(err => console.log(err))
