@@ -4,8 +4,9 @@ import Slider from '../../components/Slider/Slider'
 import FlashSale from '../../components/FlashSale/FlashSale'
 import CategoryNav from '../../components/CategoryNav/CategoryNav'
 import ProductGallery from '../../components/ProductGallery/ProductGallery'
+import { Icon } from '@iconify/react'
 
-const Store = ({ data, setData }) => {
+const Store = ({ data, setData, setCartActive }) => {
 
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState(null)
@@ -24,7 +25,7 @@ const Store = ({ data, setData }) => {
   }, [])
 
   return (
-    <>
+    <div className='store-bg'>
       {
         loading
           ?
@@ -48,14 +49,18 @@ const Store = ({ data, setData }) => {
               category={data.category[activeCategory]}
               products={data.products}
               activeCategory={activeCategory}
+              setCartActive={setCartActive}
             />
 
             {/* <div className='fotter'>
               Rishintentions
             </div> */}
+            <div onClick={() => setCartActive(true)} className='cart-btn'>
+              <Icon icon="solar:cart-outline" />
+            </div>
           </>
       }
-    </>
+    </div>
   )
 }
 

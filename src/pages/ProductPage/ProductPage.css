@@ -1,0 +1,147 @@
+.product-page{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.product-subdivision{
+    font-family: 'Poppins';
+    font-size: 13px;
+    font-weight: 200;
+    letter-spacing: .5px;
+}
+
+.product-page-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.product-page-content-left{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.side-images{
+    height: 90%;
+    width: 80px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-image{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #F5F5F5;
+}
+
+.main-image{
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    height: 90%;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-image{
+    width: 100%;
+}
+
+.product-page-content-right{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.color-size{
+    display: flex;
+    gap: 20px;
+    width: 90%;
+}
+
+.product-name-inner{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.product-price-inner{
+    font-size: 1rem;
+}
+
+.color-size select{
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+
+.color-size select:focus{
+    outline: none;
+}
+
+.add-to-cart{
+    cursor: pointer;
+    margin: 10px 0px;
+    width: calc(45% - 10px);
+    padding: 7px 20px;
+    border: none;
+    font-family: 'Poppins';
+    background-color: #262626;
+    color: white;
+    font-size: 16px;
+}
+
+.product-desc-inner{
+    margin-top: 5px;
+    height: 0px;
+    font-family: 'Poppins';
+    letter-spacing: .5px;
+    font-weight: 300;
+    font-size: 10px;
+    width: 90%;
+    margin-left: 13px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.product-desc-inner-active{
+    height: fit-content;
+}
+
+.product-desc-heding{
+    font-family: 'Poppins';
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.cart-btn{
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0 6px 20px rgba(0,0,0,.2);
+}
+
+.cart-btn svg{
+    font-size: 25px;
+}

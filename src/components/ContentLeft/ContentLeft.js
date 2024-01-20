@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import "./ContentLeft.css"
 import { Icon } from '@iconify/react'
+import { useNavigate } from 'react-router-dom'
 
 const ContentLeft = () => {
 
     const [stop, setStop] = useState(false)
+    const navigate = useNavigate();
 
     const handleScroll = (e) => {
         let top = document.documentElement.scrollTop;
@@ -34,11 +36,11 @@ const ContentLeft = () => {
                     </div>
                     <div className='left-inner-buy'>Buy my products</div>
                 </div>
-                <div className='left-inner-button'>
+                <div className='left-inner-button' onClick={() => navigate('/store')}>
                     <div className='left-inner-button-left'>Store</div>
                     <div className='left-inner-button-right'><Icon icon="mingcute:right-line" /></div>
                 </div>
-                <div className='left-inner-button'>
+                <div className='left-inner-button' onClick={() => navigate('/booking')}>
                     <div className='left-inner-button-left'>Book A Session</div>
                     <div className='left-inner-button-right'><Icon icon="mingcute:right-line" /></div>
                 </div>

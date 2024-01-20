@@ -8,3 +8,9 @@
     font-size: 30px;
     box-sizing: border-box;
 }
+
+.store-bg{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
