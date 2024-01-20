@@ -5,7 +5,7 @@ import ContentRight2 from '../../components/ContentRight2/ContentRight2';
 import ContentRight3 from '../../components/ContentRight3/ContentRight3';
 import ContentRight4 from '../../components/ContentRight4/ContentRight4';
 import ContentLeft from '../../components/ContentLeft/ContentLeft';
-// import Spline from '@splinetool/react-spline';
+import Spline from '@splinetool/react-spline';
 
 const Home = () => {
 
@@ -21,11 +21,11 @@ const Home = () => {
           <div className='content-right-1 fotter'>
           </div>
         </div>
-        {/* <Spline
+        <Spline
           className='background'
-          scene="https://prod.spline.design/iDsKkcvfDrAFN1Ux/scene.splinecode"
-        /> */}
-        <div className='background'></div>
+          scene="https://prod.spline.design/cUEuSaFnBpfAWyxb/scene.splinecode"
+        />
+        {/* <div className='background'></div> */}
       </div>
 
     </>
