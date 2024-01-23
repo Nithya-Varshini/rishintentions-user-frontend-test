@@ -20,7 +20,7 @@ const ContentRight1 = () => {
               <img src={require('../../assets/profile.png')} className='content-right-profile-image' alt='profile-img' />
             </div>
             <div className='spirtual-text'>
-              <div className='spirtual-guru'>
+              {/* <div className='spirtual-guru'>
                 <p>SPIRITUAL GURU,</p>
                 <img src={require('../../assets/text-1.png')} />
                 <img src={require('../../assets/text-2.png')} />
@@ -29,7 +29,7 @@ const ContentRight1 = () => {
               <div className='spirtual-guru'>
                 <img src={require('../../assets/text-4.png')} />
                 <p>THERAPY ENTREPRENUER</p>
-              </div>
+              </div> */}
             </div>
           </div>
   )

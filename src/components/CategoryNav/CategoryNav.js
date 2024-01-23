@@ -5,6 +5,7 @@ const CategoryNav = ({ category, activeCategory, setActiveCategory }) => {
 
     useEffect(() => {
         setActiveCategory(Object.keys(category)[0])
+        // eslint-disable-next-line
     }, [])
 
     return (

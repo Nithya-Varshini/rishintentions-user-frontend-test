@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import "./Nav.css"
 import { Icon } from '@iconify/react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 const Nav = () => {
@@ -26,18 +26,21 @@ const Nav = () => {
     return (
         <div className='nav'>
             <div className={`links ${navActive && 'links-active'}`}>
-                <Link onClick={() => setNavActive(false)} className='link' to='/'>
+                <NavLink onClick={() => setNavActive(false)} className='link' to='/'>
                     <div className='link-inner'>Home</div>
-                </Link>
-                <Link onClick={() => setNavActive(false)} className='link' to='/booking'>
+                </NavLink>
+                <NavLink onClick={() => setNavActive(false)} className='link' to='/programs'>
+                    <div className='link-inner'>Programs</div>
+                </NavLink>
+                <NavLink onClick={() => setNavActive(false)} className='link' to='/booking'>
                     <div className='link-inner'>Book A Session</div>
-                </Link>
-                <Link onClick={() => setNavActive(false)} className='link' to='/store'>
+                </NavLink>
+                <NavLink onClick={() => setNavActive(false)} className='link' to='/store'>
                     <div className='link-inner'>Store</div>
-                </Link>
-                <Link onClick={() => setNavActive(false)} className='link' to='#'>
+                </NavLink>
+                <NavLink onClick={() => setNavActive(false)} className='link' to='/about'>
                     <div className='link-inner'>About</div>
-                </Link>
+                </NavLink>
             </div>
             <div className='icons-group' onClick={() => setNavActive(pre => !pre)}>
                 <Icon icon="solar:hamburger-menu-broken" className={`hamburger ${navActive && 'hamburger-active'}`} />

@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import './Cart.css'
 import { Icon } from '@iconify/react';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = ({ cartActive, setCartActive, products }) => {
 
     const [cartData, setCartData] = useState([]);
     const [cartTotal, setCartTotal] = useState(0);
+
+    const navigate = useNavigate();
 
     const loadCart = () => {
         let tempCartData = JSON.parse(localStorage.getItem('cart'))
@@ -23,13 +26,16 @@ const Cart = ({ cartActive, setCartActive, products }) => {
     useEffect(() => {
         let tot = 0;
         Object.keys(cartData).forEach((ele) => {
-            tot += products[ele].discount ? 
-            (products[ele].price * cartData[ele].qty) - ((products[ele].price * cartData[ele].qty) * (products[ele].discount / 100)) 
-            : 
-            (products[ele].price * cartData[ele].qty)
+            if (products[ele] !== undefined) {
+                tot += products[ele].discount ?
+                    (products[ele].price * cartData[ele].qty) - ((products[ele].price * cartData[ele].qty) * (products[ele].discount / 100))
+                    :
+                    (products[ele].price * cartData[ele].qty)
+            }
         })
         setCartTotal(tot)
-    },[cartData])
+        // eslint-disable-next-line
+    }, [cartData])
 
     const handleRemove = (id) => {
         let newCart = cartData;
@@ -95,11 +101,11 @@ const Cart = ({ cartActive, setCartActive, products }) => {
                 )}
             </div>
             <div className='cart-checkout-container'>
-            <div className='cart-total'>
-                <p>Total</p>
-                <p>{cartTotal}</p>
-            </div>            
-            <button>checkout</button>
+                <div className='cart-total'>
+                    <p>Total</p>
+                    <p>{cartTotal}</p>
+                </div>
+                <button onClick={() => { setCartActive(false); navigate('/checkout') }}>checkout</button>
             </div>
         </div>
     )

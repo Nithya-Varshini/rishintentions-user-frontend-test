@@ -11,7 +11,7 @@ const ContentRight2 = () => {
       <div className='content-right-header'>Book a session</div>
       <div className='content-right-session-heading'>Helping you Connect with<br />your Innerself.</div>
       <div className='content-right-session-desc'>Rishi is the vessel that can perhaps energize your existence.  Rishi simply information and evidence and gets out of the way because evoking that inner dialogu</div>
-      <div className='session-one'>
+      {/* <div className='session-one'>
         One
         <div className='session-one-inner'>on One <p>Live Session</p></div>
       </div>
@@ -44,8 +44,8 @@ const ContentRight2 = () => {
             <div className='second-text'>MOTIVATING</div>
           </div>
         </div>
-      </div>
-      <div className='session-verified'>
+      </div> */}
+      {/* <div className='session-verified'>
         <div className='session-verified-item'>
           <img alt='verify'src={require('../../assets/verified.png')} />
           <p>1 on 1 Sessions</p>
@@ -58,7 +58,7 @@ const ContentRight2 = () => {
           <img alt='verify' src={require('../../assets/verified.png')} />
           <p>Scheduled meetings</p>
         </div>
-      </div>
+      </div> */}
       <div className='session-panel'>
         <div className='session-panel-left'>
           <img alt='session quotes' src={require('../../assets/quote.png')} className='quote-image' />

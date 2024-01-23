@@ -91,3 +91,8 @@
     justify-content: center;
     align-items: center;
 }
+
+.links .active .link-inner{
+    background-color: #3771C8;
+    color: white;
+}
