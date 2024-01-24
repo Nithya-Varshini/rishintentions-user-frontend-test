@@ -6,22 +6,16 @@ import CategoryNav from '../../components/CategoryNav/CategoryNav'
 import ProductGallery from '../../components/ProductGallery/ProductGallery'
 import { Icon } from '@iconify/react'
 
-const Store = ({ data, setData, setCartActive }) => {
+const Store = ({ storeData, setStoreData, setCartActive,fetchStoreData }) => {
 
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState(null)
 
+  
+
   useEffect(() => {
-    if (data === null) {
-      console.log('fetched');
-      fetch(`${process.env.REACT_APP_BACKEND_URL}/store-home`)
-        .then(res => res.json())
-        .then(data => { setData(data); setLoading(false); console.log(data) })
-        .catch(err => console.log(err))
-    } else {
-      setLoading(false)
-    }
-    // eslint-disable-next-line
+    fetchStoreData(setLoading)
+  // eslint-disable-next-line
   }, [])
 
   return (
@@ -32,22 +26,22 @@ const Store = ({ data, setData, setCartActive }) => {
           <>loading..</>
           :
           <>
-            {data.slider_images &&
+            {storeData.slider_images &&
               <Slider
-                slider_images={data.slider_images}
+                slider_images={storeData.slider_images}
               />
             }
 
-            {data.flash_sale && <FlashSale flash_sale={data.flash_sale} />}
+            {storeData.flash_sale && <FlashSale flash_sale={storeData.flash_sale} />}
 
             <CategoryNav
-              category={data.category}
+              category={storeData.category}
               activeCategory={activeCategory}
               setActiveCategory={setActiveCategory}
             />
             <ProductGallery
-              category={data.category[activeCategory]}
-              products={data.products}
+              category={storeData.category[activeCategory]}
+              products={storeData.products}
               activeCategory={activeCategory}
               setCartActive={setCartActive}
             />

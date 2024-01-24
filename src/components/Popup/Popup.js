@@ -3,9 +3,7 @@ import './Popup.css'
 
 const Popup = ({setPopup}) => {
   return (
-    <div className='popup'>
-        <button onClick={() => setPopup(false)}>cloase</button>
-    </div>
+    <img onClick={() => setPopup(false)} className='popup' src={require('../../assets/popup.png')} alt='popup'/>
   )
 }
 

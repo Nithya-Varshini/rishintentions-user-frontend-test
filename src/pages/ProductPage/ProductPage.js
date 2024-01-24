@@ -1,22 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./ProductPage.css"
 import { Icon } from '@iconify/react';
 import { useParams } from 'react-router-dom'
 
-const ProductPage = ({ products, setData, setCartActive }) => {
-
-  if (products === undefined) {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/store-home`)
-      .then(res => res.json())
-      .then(data => { setData(data); console.log(data) })
-      .catch(err => console.log(err))
-  }
+const ProductPage = ({ products, setData, setCartActive, fetchStoreData }) => {
 
   const { category, id } = useParams()
   const [activeColor, setActiveColor] = useState(0)
   const [activeImage, setActiveImage] = useState(0)
   const [activeDes, setActiveDes] = useState(0);
   const [size, setSize] = useState('S')
+  const [loading, setLoading] = useState(true)
 
   const handleAddToCart = () => {
     let cart = JSON.parse(localStorage.getItem('cart'))
@@ -38,9 +32,19 @@ const ProductPage = ({ products, setData, setCartActive }) => {
     setCartActive(true)
   }
 
+  useEffect(() => {
+    if (products === undefined) {
+      fetchStoreData(setLoading)
+    }
+    else {
+      setLoading(false)
+    }
+    // eslint-disable-next-line
+  }, [])
+
   return (
     <>
-      {products !== undefined &&
+      {loading ? <div>Loading...</div> :
         <div className='product-page'>
           <div className='product-subdivision'>{`Store / ${category} / ${products[id]?.name}`}</div>
           <div className='product-page-content'>
@@ -48,7 +52,7 @@ const ProductPage = ({ products, setData, setCartActive }) => {
               <div className='side-images'>
                 {
                   products[id].variants[activeColor].images.map((ele, ind) =>
-                    <img src={ele} key={ind} alt={`side ${ind}`} className='side-image' onClick={() => setActiveImage(ind)} />
+                    <img src={ele} key={ind} alt={`side ${ind}`} className={`side-image ${activeImage===ind && 'side-image-active'}`} onClick={() => setActiveImage(ind)} />
                   )
                 }
               </div>

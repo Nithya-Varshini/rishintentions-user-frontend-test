@@ -28,12 +28,20 @@
     /* margin-top: 10px; */
 }
 
+.checkout-left input[type='text']::placeholder{
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
 .input-full{
     width: 100%;
     box-sizing: border-box;
     padding: 15px;
     border-radius: 10px;
-    border: 1px solid #B3B3B3;
+    border: 1px solid rgba(179, 179, 179, 0.5);
+    font-family: 'Poppins';
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
 .input-half{
@@ -41,7 +49,10 @@
     box-sizing: border-box;
     padding: 15px;
     border-radius: 10px;
-    border: 1px solid #B3B3B3;
+    border: 1px solid rgba(179, 179, 179, 0.5);
+    font-family: 'Poppins';
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
 .input-quater{
@@ -49,7 +60,10 @@
     box-sizing: border-box;
     padding: 15px;
     border-radius: 10px;
-    border: 1px solid #B3B3B3;
+    border: 1px solid rgba(179, 179, 179, 0.5);
+    font-family: 'Poppins';
+    font-size: 12px;
+    letter-spacing: 1px;
 }
 
 .input-container{

@@ -18,6 +18,17 @@ const App = () => {
   const [cartActive, setCartActive] = useState(false)
   const [popup, setPopup] = useState(false)
 
+  const fetchStoreData = (setLoading) => {
+    if (storeData === null) {
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/store-home`)
+        .then(res => res.json())
+        .then(data => { setStoreData(data); setLoading(false); console.log(data) })
+        .catch(err => console.log(err))
+    } else {
+      setLoading(false)
+    }
+  }
+
   useEffect(() => {
     setTimeout(() => {
       setPopup(true)
@@ -25,10 +36,10 @@ const App = () => {
   }, [])
 
   const initialOptions = {
-    clientId: process.env.REACT_APP_PAYPAL_CLIENT,
+    clientId: 'test',
     currency: "USD",
     intent: "capture",
-};
+  };
 
   return (
     <PayPalScriptProvider options={initialOptions}>
@@ -36,9 +47,9 @@ const App = () => {
         <Nav />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/store' element={<Store data={storeData} setData={setStoreData} setCartActive={setCartActive} />} />
-          <Route path='/product/:category/:id' element={<ProductPage products={storeData?.products} setData={setStoreData} setCartActive={setCartActive} />} />
-          <Route path='/checkout' element={<Checkout products={storeData?.products} />} />
+          <Route path='/store' element={<Store storeData={storeData} setStoreData={setStoreData} setCartActive={setCartActive} fetchStoreData={fetchStoreData} />} />
+          <Route path='/product/:category/:id' element={<ProductPage products={storeData?.products} setData={setStoreData} setCartActive={setCartActive} fetchStoreData={fetchStoreData}/>} />
+          <Route path='/checkout' element={<Checkout products={storeData?.products} fetchStoreData={fetchStoreData}/>} />
           <Route path='/booking' element={<Booking />} />
           <Route path='/about' element={<About />} />
           <Route path='/programs' element={<Programs />} />
