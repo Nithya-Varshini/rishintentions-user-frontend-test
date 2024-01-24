@@ -20,7 +20,9 @@ const Home = () => {
           <div className='content-right-1 fotter'>
           </div>
         </div>
-        <div className='background'></div>
+        <div className='background'>
+          <img src={require('../../assets/logo.png')} alt='logo' className='bg-logo'/>
+        </div>
       </div>
     </>
   )

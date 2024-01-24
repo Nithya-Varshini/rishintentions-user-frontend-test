@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import "./App.css"
 import Home from './pages/Home/Home'
 import Store from './pages/Store/Store'
@@ -14,30 +15,38 @@ import Popup from './components/Popup/Popup'
 
 const App = () => {
   const [storeData, setStoreData] = useState(null);
-  const [cartActive,setCartActive] = useState(false)
-  const [popup,setPopup] = useState(false)
+  const [cartActive, setCartActive] = useState(false)
+  const [popup, setPopup] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
       setPopup(true)
-    },5000)
-  },[])
+    }, 5000)
+  }, [])
+
+  const initialOptions = {
+    clientId: process.env.REACT_APP_PAYPAL_CLIENT,
+    currency: "USD",
+    intent: "capture",
+};
 
   return (
-    <BrowserRouter>
-      <Nav />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/store' element={<Store data={storeData} setData={setStoreData}  setCartActive={setCartActive} />} />
-        <Route path='/product/:category/:id' element={<ProductPage products={storeData?.products} setData={setStoreData} setCartActive={setCartActive}/>} />
-        <Route path='/checkout' element={<Checkout />} />
-        <Route path='/booking' element={<Booking />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/programs' element={<Programs />} />
-      </Routes>
-      <Cart cartActive={cartActive} setCartActive={setCartActive} products={storeData?.products}/>
-      {popup && <Popup setPopup={setPopup}/>}
-    </BrowserRouter>
+    <PayPalScriptProvider options={initialOptions}>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/store' element={<Store data={storeData} setData={setStoreData} setCartActive={setCartActive} />} />
+          <Route path='/product/:category/:id' element={<ProductPage products={storeData?.products} setData={setStoreData} setCartActive={setCartActive} />} />
+          <Route path='/checkout' element={<Checkout products={storeData?.products} />} />
+          <Route path='/booking' element={<Booking />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/programs' element={<Programs />} />
+        </Routes>
+        <Cart cartActive={cartActive} setCartActive={setCartActive} products={storeData?.products} />
+        {popup && <Popup setPopup={setPopup} />}
+      </BrowserRouter>
+    </PayPalScriptProvider>
   )
 }
 

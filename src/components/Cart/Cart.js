@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Cart.css'
 import { Icon } from '@iconify/react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Cart = ({ cartActive, setCartActive, products }) => {
 
@@ -31,6 +31,9 @@ const Cart = ({ cartActive, setCartActive, products }) => {
                     (products[ele].price * cartData[ele].qty) - ((products[ele].price * cartData[ele].qty) * (products[ele].discount / 100))
                     :
                     (products[ele].price * cartData[ele].qty)
+            }
+            else{
+                handleRemove(ele)
             }
         })
         setCartTotal(tot)
@@ -83,8 +86,8 @@ const Cart = ({ cartActive, setCartActive, products }) => {
                                         </div>
                                     </div>
                                     <div className='cart-card-content-inner'>
-                                        <p>SIZE : {cartData[ele].size}</p>
-                                        <p>COLOR : {cartData[ele].color}</p>
+                                        <p>SIZE : {cartData[ele].size==='' ? <Link to={`/product/Category/${ele}`} onClick={() => setCartActive(false)}>Choose Color</Link> : cartData[ele].size}</p>
+                                        <p>COLOR : {cartData[ele].color==='' ? <Link to={`/product/Category/${ele}`} onClick={() => setCartActive(false)}>Choose Size</Link> : cartData[ele].color}</p>
                                     </div>
                                     <div className='cart-card-content-inner'>
                                         <div className='quantity'>
@@ -103,7 +106,7 @@ const Cart = ({ cartActive, setCartActive, products }) => {
             <div className='cart-checkout-container'>
                 <div className='cart-total'>
                     <p>Total</p>
-                    <p>{cartTotal}</p>
+                    <p>${cartTotal}</p>
                 </div>
                 <button onClick={() => { setCartActive(false); navigate('/checkout') }}>checkout</button>
             </div>
