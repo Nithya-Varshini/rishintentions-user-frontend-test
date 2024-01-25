@@ -1,10 +1,15 @@
 import React, { useEffect } from 'react'
 import "./CategoryNav.css"
 
-const CategoryNav = ({ category, activeCategory, setActiveCategory }) => {
+const CategoryNav = ({LinkCategory, category, activeCategory, setActiveCategory }) => {
 
     useEffect(() => {
-        setActiveCategory(Object.keys(category)[0])
+        if(LinkCategory!==undefined){
+            setActiveCategory(LinkCategory)
+        }   
+        else{
+            setActiveCategory(Object.keys(category)[0])
+        }
         // eslint-disable-next-line
     }, [])
 

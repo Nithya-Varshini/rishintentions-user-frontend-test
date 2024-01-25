@@ -3,7 +3,7 @@ import './Cart.css'
 import { Icon } from '@iconify/react';
 import { Link, useNavigate } from 'react-router-dom';
 
-const Cart = ({ cartActive, setCartActive, products }) => {
+const Cart = ({ cartActive, setCartActive, products, fetchCartCount }) => {
 
     const [cartData, setCartData] = useState([]);
     const [cartTotal, setCartTotal] = useState(0);
@@ -19,8 +19,10 @@ const Cart = ({ cartActive, setCartActive, products }) => {
 
     useEffect(() => {
         if (cartActive === true) {
+            fetchCartCount()
             loadCart()
         }
+    // eslint-disable-next-line
     }, [cartActive])
 
     useEffect(() => {
@@ -45,6 +47,7 @@ const Cart = ({ cartActive, setCartActive, products }) => {
         delete newCart[id]
         localStorage.setItem('cart', JSON.stringify(newCart))
         loadCart()
+        fetchCartCount()
     }
 
     const handleDecrement = (id) => {
