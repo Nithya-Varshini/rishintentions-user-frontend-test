@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css'
+import { ReactLenis } from '@studio-freight/react-lenis'
 import ContentRight1 from '../../components/ContentRight1/ContentRight1';
 import ContentRight2 from '../../components/ContentRight2/ContentRight2';
 import ContentRight3 from '../../components/ContentRight3/ContentRight3';
@@ -10,6 +11,7 @@ const Home = () => {
 
   return (
     <>
+      <ReactLenis root>
       <div className='content'>
         <ContentLeft />
         <div className='content-right'>
@@ -24,6 +26,7 @@ const Home = () => {
           <img src={require('../../assets/logo.png')} alt='logo' className='bg-logo'/>
         </div>
       </div>
+      </ReactLenis>
     </>
   )
 }

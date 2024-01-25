@@ -3,7 +3,7 @@ import "./ContentLeft.css"
 import { Icon } from '@iconify/react'
 import { useNavigate } from 'react-router-dom'
 
-const ContentLeft = () => {
+const ContentLeft = ({fixed}) => {
 
     const [stop, setStop] = useState(false)
     const navigate = useNavigate();
@@ -19,11 +19,18 @@ const ContentLeft = () => {
     }
 
     useEffect(() => {
-        document.addEventListener('scroll', handleScroll)
+        if(fixed===undefined){
+            document.addEventListener('scroll', handleScroll)
+        }
+        else{
+            setStop(true)
+        }
         return () => {
+        if(fixed===undefined){
             document.removeEventListener('scroll', handleScroll)
         }
-    }, [])
+        }
+    }, [fixed])
 
 
     return (
@@ -35,6 +42,10 @@ const ContentLeft = () => {
                         <div className='left-inner-desc'>Hola, Welcome to my world, Get to know me better and book sessions with me</div>
                     </div>
                     <div className='left-inner-buy'>Buy my products</div>
+                </div>
+                <div className='left-inner-button' onClick={() => navigate('/about')}>
+                    <div className='left-inner-button-left'>About me</div>
+                    <div className='left-inner-button-right'><Icon icon="mingcute:right-line" /></div>
                 </div>
                 <div className='left-inner-button' onClick={() => navigate('/store')}>
                     <div className='left-inner-button-left'>Store</div>

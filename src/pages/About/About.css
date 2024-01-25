@@ -1,14 +1,16 @@
-.about-content{
+.about-content {
     background-color: #ececec;
     height: fit-content;
     width: 100%;
     margin: 0;
 }
-.content-right-main{
+
+.content-right-main {
     width: 75%;
     display: flex;
     flex-direction: column;
 }
+
 .content-right-1 {
     width: 100%;
     height: fit-content;
@@ -17,68 +19,67 @@
     padding-left: 3%;
     padding-right: 3%;
 }
+
 .content-right-header-poster {
-    margin-top: 5%;
+    width: 90%;
+    margin: 5%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     border: #000 6px solid;
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
 
 }
-.content-right-header-poster-bullet{
+
+.content-right-header-poster-bullet {
     font-family: Neue Montreal;
-    margin-left: 5%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+    gap: 10px;
+    box-sizing: border-box;
 }
+
 .content-right-header-poster-heading {
-    margin-top: 30%;
-    line-height: 70px;
+    line-height: 60px;
     font-weight: 500;
-    font-size: 60px;
+    font-size: 45px;
 }
-.quote-image{
-    margin-top: 3%;
+
+.quote-image {
     width: 6%;
 }
+
 .content-right-header-poster-para {
-    margin-top: 15px;
-    padding-right: 30px;
-    text-align: justify;
     line-height: 30px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 500;
+    letter-spacing: 1px;
 }
-.content-right-header-poster-image{
+
+.content-right-header-poster-image {
     width: 50%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 0 25px 25px 0;
 }
 
-.content-right-story{
-    margin-top: 50px;
+.content-right-story {
+    margin-top: 0px;
 }
-.content-right-story-quoted{
+
+.content-right-story-quoted {
     font-family: Neue Montreal;
     font-size: 18px;
     font-weight: 500;
 }
+
 .content-right-story-para {
-  margin-top: 100px;
-  margin-left: 40%;
-  margin-right: 10%;
-  font-family: Neue Montreal;
-  text-align: justify;
-  line-height: 1.5;
-  letter-spacing: 1.5px;
-  font-size: 15px;
-  font-weight: 400;
-}
-.content-right-story-para-2 {
-    margin-top: 100px;
-    margin-left: 40%;
+    margin-left: 30%;
     margin-right: 10%;
     font-family: Neue Montreal;
     text-align: justify;
@@ -86,39 +87,58 @@
     letter-spacing: 1.5px;
     font-size: 15px;
     font-weight: 400;
-  }
-.content-right-mystory-heading{
+}
+
+.content-right-story-para-2 {
+    margin-top: 50px;
+    margin-left: 30%;
+    margin-right: 10%;
+    font-family: Neue Montreal;
+    text-align: justify;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.content-right-mystory-heading {
     font-family: Neue Montreal;
     font-size: 35px;
     font-weight: 500;
 }
-.story-img-div{
+
+.story-img-div {
     margin-left: 10%;
     width: 60%;
 }
-.story-img{
+
+.story-img {
     margin-top: 10%;
     margin-left: 0;
     width: 100%;
     border-radius: 70% 30% 70% 30%;
 }
-.about-story-img{
+
+.about-story-img {
     margin-top: -125px;
     margin-left: 60%;
     width: 20%;
     aspect-ratio: 1/1;
     border-radius: 50%;
 }
+
 .content-right-brief {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
 }
-.content-right-brief-intro{
+
+.content-right-brief-intro {
     font-size: 150px;
     font-weight: 500;
     font-family: philosopher;
 }
+
 .content-right-experience {
     margin-top: 100px;
     display: flex;
@@ -126,23 +146,26 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
 .content-right-experience-flex {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
-.content-right-experience-img
-{
+
+.content-right-experience-img {
     width: 40%;
 }
-.content-right-experience-header{
+
+.content-right-experience-header {
     font-family: Neue Montreal;
     font-size: 50px;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 40px;
 }
-.content-right-experience-para{
+
+.content-right-experience-para {
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -152,55 +175,37 @@
     border-top: #ccc 1px solid;
     position: relative;
 }
+
 .experience-item {
     position: relative;
+}
+
+.experience-text{
     padding: 2px 0 2px 0;
     margin-top: 5px;
     display: flex;
     flex-direction: row;
     font-family: Neue Montreal;
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 350;
     letter-spacing: 1px;
     border-bottom: #ccc 1px solid;
     cursor: pointer;
     transition: letter-spacing 0.5s;
 }
 
-.exptip {
-    position: absolute;
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    transition: 0.3s;
-    background-color: #333233;
-    color: white;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 20px;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;  /* Adjust the z-index to bring it above the content */
+.experience-text p{
+    color: #ccc;
+    font-size: 15px;
+    margin-top: 0;
 }
 
-.experience-item:hover {
+.experience-text:hover{
     color: #ccc;
     letter-spacing: 4px;
 }
 
-.experience-item:hover + .exptip {
-    opacity: 1;
-    z-index: 9;
-}
-
-.experience-item p {
-    font-size: 15px;
-    margin-top: 0;
-    color: #ccc;
-}
-
-/* .exptip {
+.exptip {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -218,16 +223,52 @@
     top: calc(100% + 15px);
     padding: 20px;
     border-radius: 10px;
+    font-family: Neue Montreal;
+    letter-spacing: 1px;
 }
 
-.experience-item:hover + .exptip {
-    z-index: 9;
+.exptip::after{
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: #333233;
+    top: -7.5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    border-radius: 3px 0px 5px 0px;
+}
+
+.exptip p:nth-child(1) {
+    font-size: 30px;
+    margin-bottom: -20px;
+}
+
+.exptip p:nth-child(2) {
+    font-weight: 300;
+}
+
+.exptip p:nth-child(3) {
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+.exptip p:nth-child(4) {
+    font-weight: 300;
+    opacity: .7;
+}
+
+.experience-text:hover+.exptip {
     opacity: 1;
-} */
-.content-right-getstarted{
-    margin-top: 30px;
-    border-radius: 20px;
-    padding: 30px;
+    z-index: 9;
+}
+
+.content-right-getstarted {
+    margin-top: 10px;
+    border-radius: 30px;
+    padding: 20px;
     background-color: black;
     color: #ccc;
+    font-family: Neue Montreal;
+    letter-spacing: 1px;
 }

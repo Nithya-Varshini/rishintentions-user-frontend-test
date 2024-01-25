@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import "./ProductPage.css"
 import { Icon } from '@iconify/react';
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
-const ProductPage = ({ products, setData, setCartActive, fetchStoreData }) => {
+const ProductPage = ({ products, setData, setCartActive, fetchStoreData, cartCount, fetchCartCount }) => {
 
   const { category, id } = useParams()
   const [activeColor, setActiveColor] = useState(0)
@@ -29,15 +29,14 @@ const ProductPage = ({ products, setData, setCartActive, fetchStoreData }) => {
       }
       localStorage.setItem('cart', JSON.stringify(cart))
     }
+    fetchCartCount()
     setCartActive(true)
   }
 
   useEffect(() => {
-    if (products === undefined) {
-      fetchStoreData(setLoading)
-    }
-    else {
-      setLoading(false)
+    fetchStoreData(setLoading)
+    if (cartCount === null) {
+      fetchCartCount()
     }
     // eslint-disable-next-line
   }, [])
@@ -46,13 +45,17 @@ const ProductPage = ({ products, setData, setCartActive, fetchStoreData }) => {
     <>
       {loading ? <div>Loading...</div> :
         <div className='product-page'>
-          <div className='product-subdivision'>{`Store / ${category} / ${products[id]?.name}`}</div>
+          <div className='product-subdivision'>
+            <Link to={`/store`}>Store</Link>/
+            <Link to={`/store/${category}`}>{category}</Link>/
+            <p>{products[id]?.name}</p>
+          </div>
           <div className='product-page-content'>
             <div className='product-page-content-left'>
               <div className='side-images'>
                 {
                   products[id].variants[activeColor].images.map((ele, ind) =>
-                    <img src={ele} key={ind} alt={`side ${ind}`} className={`side-image ${activeImage===ind && 'side-image-active'}`} onClick={() => setActiveImage(ind)} />
+                    <img src={ele} key={ind} alt={`side ${ind}`} className={`side-image ${activeImage === ind && 'side-image-active'}`} onClick={() => setActiveImage(ind)} />
                   )
                 }
               </div>
@@ -99,6 +102,9 @@ const ProductPage = ({ products, setData, setCartActive, fetchStoreData }) => {
             </div>
           </div>
           <div onClick={() => setCartActive(true)} className='cart-btn'>
+            {cartCount !== null &&
+              <div className='cart-count'>{cartCount}</div>
+            }
             <Icon icon="solar:cart-outline" />
           </div>
         </div>

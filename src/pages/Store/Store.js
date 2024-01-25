@@ -5,17 +5,20 @@ import FlashSale from '../../components/FlashSale/FlashSale'
 import CategoryNav from '../../components/CategoryNav/CategoryNav'
 import ProductGallery from '../../components/ProductGallery/ProductGallery'
 import { Icon } from '@iconify/react'
+import { useParams } from 'react-router-dom'
 
-const Store = ({ storeData, setStoreData, setCartActive,fetchStoreData }) => {
+const Store = ({ storeData, setCartActive, fetchStoreData, cartCount, fetchCartCount }) => {
 
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState(null)
-
-  
+  const { LinkCategory } = useParams();
 
   useEffect(() => {
     fetchStoreData(setLoading)
-  // eslint-disable-next-line
+    if (cartCount === null) {
+      fetchCartCount()
+    }
+    // eslint-disable-next-line
   }, [])
 
   return (
@@ -35,6 +38,7 @@ const Store = ({ storeData, setStoreData, setCartActive,fetchStoreData }) => {
             {storeData.flash_sale && <FlashSale flash_sale={storeData.flash_sale} />}
 
             <CategoryNav
+              LinkCategory={LinkCategory}
               category={storeData.category}
               activeCategory={activeCategory}
               setActiveCategory={setActiveCategory}
@@ -50,6 +54,9 @@ const Store = ({ storeData, setStoreData, setCartActive,fetchStoreData }) => {
               Rishintentions
             </div> */}
             <div onClick={() => setCartActive(true)} className='cart-btn'>
+              {cartCount !== null &&
+                <div className='cart-count'>{cartCount}</div>
+              }
               <Icon icon="solar:cart-outline" />
             </div>
           </>
