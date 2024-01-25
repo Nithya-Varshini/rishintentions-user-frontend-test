@@ -1,4 +1,233 @@
 .about-content{
     background-color: #ececec;
-    margin-top: 0px;
+    height: fit-content;
+    width: 100%;
+    margin: 0;
+}
+.content-right-main{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+.content-right-1 {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.content-right-header-poster {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    border: #000 6px solid;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+
+}
+.content-right-header-poster-bullet{
+    font-family: Neue Montreal;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.content-right-header-poster-heading {
+    margin-top: 30%;
+    line-height: 70px;
+    font-weight: 500;
+    font-size: 60px;
+}
+.quote-image{
+    margin-top: 3%;
+    width: 6%;
+}
+.content-right-header-poster-para {
+    margin-top: 15px;
+    padding-right: 30px;
+    text-align: justify;
+    line-height: 30px;
+    font-size: 30px;
+    font-weight: 500;
+}
+.content-right-header-poster-image{
+    width: 50%;
+    border-radius: 0 25px 25px 0;
+}
+
+.content-right-story{
+    margin-top: 50px;
+}
+.content-right-story-quoted{
+    font-family: Neue Montreal;
+    font-size: 18px;
+    font-weight: 500;
+}
+.content-right-story-para {
+  margin-top: 100px;
+  margin-left: 40%;
+  margin-right: 10%;
+  font-family: Neue Montreal;
+  text-align: justify;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.content-right-story-para-2 {
+    margin-top: 100px;
+    margin-left: 40%;
+    margin-right: 10%;
+    font-family: Neue Montreal;
+    text-align: justify;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+.content-right-mystory-heading{
+    font-family: Neue Montreal;
+    font-size: 35px;
+    font-weight: 500;
+}
+.story-img-div{
+    margin-left: 10%;
+    width: 60%;
+}
+.story-img{
+    margin-top: 10%;
+    margin-left: 0;
+    width: 100%;
+    border-radius: 70% 30% 70% 30%;
+}
+.about-story-img{
+    margin-top: -125px;
+    margin-left: 60%;
+    width: 20%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+.content-right-brief {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.content-right-brief-intro{
+    font-size: 150px;
+    font-weight: 500;
+    font-family: philosopher;
+}
+.content-right-experience {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.content-right-experience-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.content-right-experience-img
+{
+    width: 40%;
+}
+.content-right-experience-header{
+    font-family: Neue Montreal;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.content-right-experience-para{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 300;
+    border-top: #ccc 1px solid;
+    position: relative;
+}
+.experience-item {
+    position: relative;
+    padding: 2px 0 2px 0;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    font-family: Neue Montreal;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border-bottom: #ccc 1px solid;
+    cursor: pointer;
+    transition: letter-spacing 0.5s;
+}
+
+.exptip {
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    background-color: #333233;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;  /* Adjust the z-index to bring it above the content */
+}
+
+.experience-item:hover {
+    color: #ccc;
+    letter-spacing: 4px;
+}
+
+.experience-item:hover + .exptip {
+    opacity: 1;
+    z-index: 9;
+}
+
+.experience-item p {
+    font-size: 15px;
+    margin-top: 0;
+    color: #ccc;
+}
+
+/* .exptip {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: justify;
+    transition: .2s;
+    width: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    font-size: 14px;
+    background-color: #333233;
+    color: white;
+    top: calc(100% + 15px);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.experience-item:hover + .exptip {
+    z-index: 9;
+    opacity: 1;
+} */
+.content-right-getstarted{
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: black;
+    color: #ccc;
 }
