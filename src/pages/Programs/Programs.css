@@ -1,10 +1,40 @@
+.background{
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #ececec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    width: 100%;
+    height: 100vh;
+    margin-top: 94vh;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 5px;
+}
+
+.content-right{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .program-content{
     background-color: #ececec;
     margin-top: 0px;
 }
 
 .program-profile{
-    width: 100%;
     height: 70vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -73,3 +103,253 @@
     padding: 5px 20px;
     border-radius: 20px;
 }
+
+.vector1 {
+    height: 50px;
+    width: 50px;
+    float: right;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+    .box .vector {
+    height: 50px;
+    margin-left: 50px; 
+    margin-top: 100px;
+    width: 50px;
+    }
+
+    .a-GREAT-MAN-IS-THE {
+        color: #000000;
+        font-family: "Neue Montreal-Medium", Helvetica;
+        font-size: 30px;
+        font-weight: 500;
+        left: 17px;
+        letter-spacing: 2.4px;
+        line-height: normal;
+        text-align: center;
+        
+      }
+.inner-block{
+    
+    border-radius: 60px;
+background: #F4F4F4;
+margin:10px;
+padding-top:40px;
+padding-bottom: 40px;
+}
+
+.inner-block-1,.text-wrap{
+    display: flex;
+}
+
+.inner-block-heading{
+    color: #000;
+    text-align: center;
+    font-family: "Neue Montreal";
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2.4px;
+    margin-bottom: 50px ;
+}
+
+.left-block{
+    width: 40%;
+height: 450px;
+flex-shrink: 0;
+border-radius: 15px;
+margin:30px;
+
+
+background-blend-mode: soft-light, normal;
+box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.10), 4px 4px 26px 0px rgba(255, 255, 255, 0.25) inset, 0px 4px 2px 0px rgba(255, 255, 255, 0.25) inset, 0px -4px 2px 0px rgba(0, 0, 0, 0.05) inset;
+backdrop-filter: blur(40px);
+}
+
+.inner-image{
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.text-wrapper-5{
+    color: #000;
+    padding: 19px;
+    font-family: "Neue Montreal";
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.2px;
+}
+
+
+.image-with-content {
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .image-with-content.imgg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .content22 {
+    font-size: 20px;
+  }
+
+  .text-heading,.text-content{
+    color: #000;
+
+font-family: "Neue Montreal";
+font-size: 27px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 1.6px;
+  }
+
+  .text-heading{
+    width:75%;
+    padding-bottom: 30px;
+  }
+
+  .text-wrapper-25{
+    width: 430px;
+    color: #000;
+
+font-family: "Neue Montreal";
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 1px;
+text-transform: capitalize;
+padding-bottom: 20px;
+  }
+
+  .button-25{
+    color:white;
+    display: inline-flex;
+padding: 11px 63px 10px 64px;
+justify-content: center;
+align-items: center;border-radius: 110px;
+background: #000;
+  }
+
+  .text-wrap{
+  }
+
+  .right-block{
+    
+margin-top:20px;
+    width:60%;
+    padding-top: 50px;
+    padding-bottom:50px;
+    padding-left:30px;
+
+  }
+
+
+  .inner-block-12{
+        margin:70px;
+        width: 63%;
+  }
+
+  .text-1{
+    color: var(--Primary, #F39150);
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+  .text-2{
+    color: var(--Black, #36405B);
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+
+  .text-3{
+    color: var(--Black, #36405B);
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 144.444% */
+    margin-bottom: 20px;
+  }
+
+  .inner-12{
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  .inner-12-1{
+    width:60px;
+    height: 60px;
+    justify-content: center;
+    background-color: var(--Secondary, #9FBD84);
+    border-radius: 100%;
+    padding: auto;
+    margin-right: 10px;
+    justify-content: center;
+  align-items: center;
+  }
+
+  .imggg{
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    width: 35px;
+height: 35px;
+  }
+
+  .content-12-1{
+    color: var(--Black, #36405B);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; /* 144.444% */
+
+  }
+
+  .content-12{
+    color: var(--Text, #777);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+
+  .footer{
+    height:250px;
+    background: linear-gradient(to right, rgb(112, 97, 141), rgb(215, 109, 119), rgb(255, 175, 123));;
+    width:100%;
+    font-weight: 100;
+    vertical-align: middle;
+    
+  }
+
+  .text-11{
+    color: #000;
+font-family: "Rampart One";
+font-size: 64px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -1.28px;
+  }
